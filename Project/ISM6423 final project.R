@@ -18,6 +18,7 @@ age_per_platform_by_gender <- ggplot(data=df_user, mapping=aes(x=platform, y=age
 interests_per_country_by_demographics <- ggplot(data=df_user, mapping=aes(x=location, fill=interests)) + 
   geom_bar(position=position_dodge(width = 0.8), binwidth = 25) + 
   facet_grid(demographics ~ .)
+
 # Merging datasets
 complete_data <- df_marketing %>%
   filter(tolower(category) == "social") %>%
